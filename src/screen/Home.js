@@ -1,5 +1,6 @@
 import React from 'react';
 import {StyleSheet, View, Text, Image, ScrollView} from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Home = () => {
   return (
@@ -18,11 +19,11 @@ const Home = () => {
             urbana. Menor do que os mosquitos comuns, é preto com listras
             brancas no tronco, na cabeça e nas pernas. Suas asas são
             translúcidas e o ruído que produzem é praticamente inaudível ao ser
-            humano.
+            humano.   
           </Text>
         </ScrollView>
       </View>
-      {/* <View style={styles.footer}>
+      {/* <View style={styles.footer}>                                                                                                                
         <Text style={styles.footerText}>Rodapé</Text>
       </View> */}
     </View>
@@ -81,3 +82,5 @@ const styles = StyleSheet.create({
 });
 
 export default Home;
+
+ 
