@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, Image, ScrollView, TouchableOpacity,Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Home = () => {
@@ -20,6 +20,13 @@ const Home = () => {
             translúcidas e o ruído que produzem é praticamente inaudível ao ser
             humano.   
           </Text>
+
+        <View style={styles.view}>
+          <Text style={styles.informacaobotao}>Clique para mais informações:</Text>
+
+          <TouchableOpacity onPress={()=>Linking.openURL('https://www.bombeiros.ce.gov.br/2022/06/21/corpo-de-bombeiros-do-ceara-um-pouco-mais-sobre-combate-a-dengue/')} ><Text style={styles.botao}>Acessar</Text></TouchableOpacity>
+          </View>   
+
         </ScrollView>
       </View>
       {/* <View style={styles.footer}>                                                                                                                
@@ -42,7 +49,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    fontSize: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.37)',
     height: 170,
     width: 170,
@@ -74,8 +80,30 @@ const styles = StyleSheet.create({
   explic: {
     textAlign: 'center',
     color: 'white',
+    textAlign:'justify',
     fontSize: 20,
     margin: 30,
+  },
+
+  view: {
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+  },
+  botao: {
+    textAlign: 'center',
+    color: 'black',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginTop: 10,
+    marginLeft:10,
+    padding: 10,  
+    width:150,
+  },
+  informacaobotao: {
+    color:'white',
+    fontSize:15,
+    marginLeft:8,
   }
 });
 
