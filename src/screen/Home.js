@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, ScrollView} from 'react-native';
+import {StyleSheet, View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Home = () => {
@@ -21,6 +21,11 @@ const Home = () => {
             translúcidas e o ruído que produzem é praticamente inaudível ao ser
             humano.   
           </Text>
+
+          <Text>Mais descrição:</Text>
+
+          <TouchableOpacity><Text style={styles.botao}>Acessar</Text></TouchableOpacity>
+
         </ScrollView>
       </View>
       {/* <View style={styles.footer}>                                                                                                                
@@ -79,6 +84,11 @@ const styles = StyleSheet.create({
     fontSize: 20,
     margin: 30,
   },
+  botao: {
+    fontSize: 15,
+    color: 'white',
+    backgroundColor: 'green'
+  }
 });
 
 export default Home;
