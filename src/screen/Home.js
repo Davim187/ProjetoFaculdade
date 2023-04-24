@@ -1,15 +1,14 @@
 import React from 'react';
-import {StyleSheet, View, Text, Image, ScrollView, TouchableOpacity} from 'react-native';
+import {StyleSheet, View, Text, Image, ScrollView, TouchableOpacity,Linking} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        {/* <Image style={styles.logo} 
-    source={require('')}/>  */}
-        <Text style={styles.logo}></Text>
-        <Text style={styles.nameLogo}>NameLogo</Text>
+        <Image style={styles.logo} 
+    source={require('../../android/app/src/main/res/mipmap-xxxhdpi/icon.png')}/> 
+        <Text style={styles.nameLogo}>DengueOff</Text>
       </View>
       <View style={styles.content}>
         <ScrollView>
@@ -22,9 +21,11 @@ const Home = () => {
             humano.   
           </Text>
 
-          <Text>Mais descrição:</Text>
+        <View style={styles.view}>
+          <Text style={styles.informacaobotao}>Clique para mais informações:</Text>
 
-          <TouchableOpacity><Text style={styles.botao}>Acessar</Text></TouchableOpacity>
+          <TouchableOpacity onPress={()=>Linking.openURL('https://www.bombeiros.ce.gov.br/2022/06/21/corpo-de-bombeiros-do-ceara-um-pouco-mais-sobre-combate-a-dengue/')} ><Text style={styles.botao}>Acessar</Text></TouchableOpacity>
+          </View>   
 
         </ScrollView>
       </View>
@@ -48,8 +49,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    color: 'white',
-    fontSize: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.37)',
     height: 170,
     width: 170,
@@ -81,13 +80,30 @@ const styles = StyleSheet.create({
   explic: {
     textAlign: 'center',
     color: 'white',
+    textAlign:'justify',
     fontSize: 20,
     margin: 30,
   },
+
+  view: {
+    display:'flex',
+    flexDirection:'row',
+    alignItems:'center',
+  },
   botao: {
-    fontSize: 15,
-    color: 'white',
-    backgroundColor: 'green'
+    textAlign: 'center',
+    color: 'black',
+    backgroundColor: 'white',
+    borderRadius: 10,
+    marginTop: 10,
+    marginLeft:10,
+    padding: 10,  
+    width:150,
+  },
+  informacaobotao: {
+    color:'white',
+    fontSize:15,
+    marginLeft:8,
   }
 });
 
