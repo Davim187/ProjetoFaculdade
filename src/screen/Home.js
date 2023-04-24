@@ -6,10 +6,9 @@ const Home = () => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        {/* <Image style={styles.logo} 
-    source={require('')}/>  */}
-        <Text style={styles.logo}></Text>
-        <Text style={styles.nameLogo}>NameLogo</Text>
+        <Image style={styles.logo} 
+    source={require('../../android/app/src/main/res/mipmap-xxxhdpi/icon.png')}/> 
+        <Text style={styles.nameLogo}>DengueOff</Text>
       </View>
       <View style={styles.content}>
         <ScrollView>
@@ -78,7 +77,7 @@ const styles = StyleSheet.create({
     color: 'white',
     fontSize: 20,
     margin: 30,
-  },
+  }
 });
 
 export default Home;

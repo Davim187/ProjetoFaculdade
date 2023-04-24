@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
   humidity: {
     color: 'white',
     textAlign:'center',
-    marginLeft: 50,
+    marginLeft: '20%',
     marginBottom: 10,
     borderRightWidth: 1,
     borderColor: 'white',
