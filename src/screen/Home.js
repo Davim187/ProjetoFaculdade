@@ -42,7 +42,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   logo: {
-    color: 'white',
     fontSize: 20,
     backgroundColor: 'rgba(255, 255, 255, 0.37)',
     height: 170,
