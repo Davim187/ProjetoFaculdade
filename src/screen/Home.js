@@ -29,9 +29,6 @@ const Home = () => {
 
         </ScrollView>
       </View>
-      {/* <View style={styles.footer}>                                                                                                                
-        <Text style={styles.footerText}>Rodapé</Text>
-      </View> */}
     </View>
   );
 };
@@ -82,7 +79,9 @@ const styles = StyleSheet.create({
     color: 'white',
     textAlign:'justify',
     fontSize: 20,
-    margin: 30,
+    marginLeft: 30,
+    marginRight:30,
+    marginTop:10,
   },
 
   view: {
